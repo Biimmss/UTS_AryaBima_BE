@@ -111,22 +111,24 @@
 
 - **Class Diagram**
 
-<img src="./image/cDiagram.png" />
+<img src="./image/relasidrawio.png" />
 
 <br>
 
 - **ERD (Entity Relationship Diagram)**
 
 <img src="./image/ERD.png" />
-
 <br>
 
 
 - **Relasi Table**
 
-<img src="./image/relasii.jpeg" />
+<img src="./image/relasidb.png" />
 
 <br>
 <br>
 <br>
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Biimmss/Belajar_Sequelize/main/public/logo-bims.jpg" alt="Logo" width="200"/>
+</div>
