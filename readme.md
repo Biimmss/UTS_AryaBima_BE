@@ -32,7 +32,7 @@
 
 <br>
 
-## Dependecies / Teknologi yang digunakan
+## Dependencies / Teknologi yang digunakan
 
 1. **express**
 
