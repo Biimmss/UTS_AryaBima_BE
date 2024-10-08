@@ -4,6 +4,7 @@ import Pembayaran  from "../model/PembayaranModel.js";
 import Sales  from "../model/SalesModel.js";
 import Pegawai  from "../model/PegawaiModel.js";
 import clean from "./helpers/clean.js";
+import Admin from "../model/AdminModel.js";
 import '../model/index.js'
 
 const createSeeder = async () => {
@@ -24,14 +25,15 @@ const createSeeder = async () => {
     
     const sales = await Sales.create({
         nama_sales: "Peter Greg",
-        email_sales: "12556677",
+        email_sales: "PeterGreg@gmail.com",
         id_customer:customer.dataValues.id_customer
     });
 
     const pegawai = await Pegawai.create({
         nama: "RAPLI",
-        jabatan: "1",
+        jabatan: "Manager Marketing",
         telepon: "0823-2244-3321",
+        email: "Rapli@gmail.com",
         id_customer:customer.dataValues.id_customer,
         id_sales:sales.dataValues.id_sales,
         id_stock:stock.dataValues.id_stock
@@ -44,10 +46,17 @@ const createSeeder = async () => {
         id_customer:customer.dataValues.id_customer,
         id_pegawai:pegawai.dataValues.id_pegawai
     });
+
+    const admin = await Admin.create({
+        username: "admin",
+        password: "admin123",
+        email: "admin@example.com"
+    });
+    
     
     // // console.log(customer.dataValues.id_customer)
     
-    return { customer, stock, pembayaran, sales, pegawai };
+    return { customer, stock, pembayaran, sales, pegawai , admin};
 }
 
 const customer = await createSeeder()

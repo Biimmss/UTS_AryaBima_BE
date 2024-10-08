@@ -4,6 +4,7 @@ import Pegawai from "./PegawaiModel.js";
 import Sales from "./SalesModel.js";
 import Stock from "./StockModel.js";
 import Pembayaran from "./PembayaranModel.js";
+import Admin from "./AdminModel.js";
 
 
 // Relasi antara Pegawai dan Customer (Many-to-One)
@@ -75,7 +76,7 @@ Pembayaran.belongsTo(Pegawai, {
 
 // await db.sync({force:true});
 
-export { db, Customer, Pegawai, Sales, Stock , Pembayaran};
+export { db, Customer, Pegawai, Sales, Stock , Pembayaran, Admin};
 
 
 

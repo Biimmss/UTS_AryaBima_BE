@@ -54,8 +54,8 @@ export const getPegawaiById = async (req, res) => {
 
 export const createPegawai = async (req, res) => {
     try{
-        const { nama, jabatan, telepon, id_customer, id_sales, id_stock } = req.body;
-        const pegawai = await Pegawai.create({nama, jabatan, telepon, id_customer, id_sales, id_stock });
+        const { nama, jabatan, telepon, email, id_customer, id_sales, id_stock } = req.body;
+        const pegawai = await Pegawai.create({nama, jabatan, telepon, email, id_customer, id_sales, id_stock });
         res.status(200).json(pegawai);
     }catch(error){
         res.status(500).json({error: error.message, message: "gagal membuat createPegawai"})
@@ -64,8 +64,8 @@ export const createPegawai = async (req, res) => {
 
 export const updatePegawai = async (req, res) => {
     try {
-        const { nama, jabatan, telepon, id_customer, id_sales, id_stock } = req.body
-        const data = await Pegawai.update({ nama, jabatan, telepon, id_customer, id_sales, id_stock }, {
+        const { nama, jabatan, telepon, email, id_customer, id_sales, id_stock } = req.body
+        const data = await Pegawai.update({ nama, jabatan, telepon, email, id_customer, id_sales, id_stock }, {
             where: {
                 id_pegawai: req.params.id
             }

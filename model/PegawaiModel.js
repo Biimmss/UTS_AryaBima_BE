@@ -22,6 +22,10 @@ const Pegawai = db.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     tableName: "Pegawai",

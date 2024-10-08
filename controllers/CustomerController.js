@@ -5,6 +5,8 @@ import Customer from "../model/CustomerModel.js";
 export const getAllCustomer = async (req, res) => {
     try{
         const customer = await Customer.findAll();
+        // console.log(customer);
+        // console.log("GET API USER DI REQUEST")
         res.status(200).json(customer)
     } catch(error){
         res.status(500).json({error: error.massage, message: "terjadi kesalahan saat getAllCustomer"})
