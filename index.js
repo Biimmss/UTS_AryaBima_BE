@@ -5,6 +5,7 @@ import router from "./routes/router.js";
 import bodyParser from "body-parser";
 import db from "./utils/connection.js";
 import cors from "cors"
+  
 
 const app = express();
 app.use(cors());
