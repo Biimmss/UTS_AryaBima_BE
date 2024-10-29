@@ -1,8 +1,10 @@
 import Customer from "../../model/CustomerModel.js";
 import Stock  from "../../model/StockModel.js";
 import Pembayaran  from "../../model/PembayaranModel.js";
-import Sales  from "../../model/SalesModel.js";
-import Pegawai  from "../../model/PegawaiModel.js";
+// import Sales  from "../../model/SalesModel.js";
+// import Pegawai  from "../../model/PegawaiModel.js";
+import Transaksi from "../../model/TransaksiModel.js";
+import Invoice from "../../model/InvoiceModel.js";
 
 export default async function clean() {
   await Customer.destroy({
@@ -10,7 +12,7 @@ export default async function clean() {
     force: true,
     cascade: true,
   });
-  await Sales.destroy({
+  await Transaksi.destroy({
     where: {},
     force: true,
     cascade: true,
@@ -25,7 +27,7 @@ export default async function clean() {
     force: true,
     cascade: true,
   });
-  await Pegawai.destroy({
+  await Invoice.destroy({
     where: {},
     force: true,
     cascade: true,

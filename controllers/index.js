@@ -1,7 +1,7 @@
-import Customer from "./CustomerModel.js"
-import Sales from "./SalesController.js"
-import Stock from "./StockController.js"
-import db from "../utils/connection.js";
+// import Customer from "./CustomerModel.js"
+// import Sales from "./SalesController.js"
+// import Stock from "./StockController.js"
+// import db from "../utils/connection.js";
 
 
 //untuk meotomisasi perubahan
@@ -11,4 +11,4 @@ import db from "../utils/connection.js";
 // await Sales.sync();
 // await Stock.sync();
 
-await db.sync();
+// await db.sync();

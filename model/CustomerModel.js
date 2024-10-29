@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import db from "../utils/connection.js";
-import Sales from "./SalesModel.js";
-import Stock from "./StockModel.js";
+// import Sales from "./SalesModel.js";
+// import Stock from "./StockModel.js";
 
 const Customer = db.define(
   "Customer",

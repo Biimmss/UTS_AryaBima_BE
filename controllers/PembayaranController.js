@@ -1,7 +1,5 @@
 import Pembayaran from '../model/PembayaranModel.js'
 import Customer from '../model/CustomerModel.js';
-import Pegawai from '../model/PegawaiModel.js';
-
 
 export const getAllPembayaran = async (req, res) => {
     try{
@@ -10,10 +8,6 @@ export const getAllPembayaran = async (req, res) => {
                 {
                     model: Customer,
                     as: 'customer'
-                },
-                {
-                    model: Pegawai,
-                    as: 'pegawai'
                 }
             ]
         });
@@ -32,10 +26,6 @@ export const getPembayaranById = async (req, res) => {
                 {
                     model: Customer,
                     as: 'customer'
-                },
-                {
-                    model: Pegawai,
-                    as: 'pegawai'
                 }
             ]
         }); // Menggunakan findByPk untuk mencari berdasarkan primary key
@@ -51,8 +41,8 @@ export const getPembayaranById = async (req, res) => {
 
 export const createPembayaran = async (req, res) => {
     try{
-        const { metode_pembayaran, tanggal_pembayaran, jumlah_pembayaran, id_customer, id_pegawai} = req.body;
-        const pembayaran = await Pembayaran.create({metode_pembayaran, tanggal_pembayaran, jumlah_pembayaran, id_customer, id_pegawai});
+        const { metode_pembayaran, tanggal_pembayaran, jumlah_pembayaran, id_customer} = req.body;
+        const pembayaran = await Pembayaran.create({metode_pembayaran, tanggal_pembayaran, jumlah_pembayaran, id_customer});
         res.status(200).json(pembayaran);
     }catch(error){
         res.status(500).json({error: error.message, message: "gagal membuat createPembayaran"})

@@ -1,6 +1,6 @@
 // import Customer from "../models/CustomerModels.js";
 import Sales from '../model/SalesModel.js'
-import Customer from '../model/CustomerModel.js';
+// import Customer from '../model/CustomerModel.js';
 // import Pembayaran from '../model/PembayaranModel.js'
 
 
